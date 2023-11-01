@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 notes.clear();
+                notes2.clear();
                 recreate();
             }
 
