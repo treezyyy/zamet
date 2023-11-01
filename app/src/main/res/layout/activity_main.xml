@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/lol"
+
     tools:context=".MainActivity">
 
     <ListView
@@ -15,14 +17,19 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/button"
-        android:layout_width="128dp"
-        android:layout_height="52dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/adds"
+
         android:text="Добавить"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="27dp"
         tools:ignore="MissingConstraints" />
 
 
