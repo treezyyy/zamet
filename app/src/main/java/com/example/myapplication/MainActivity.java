@@ -50,6 +50,17 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        ImageButton button1;
+        button1 = (ImageButton) findViewById(R.id.button3);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                notes.clear();
+                recreate();
+            }
+
+        });
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notes);
         listView.setAdapter(arrayAdapter);
 
