@@ -12,15 +12,20 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
     static ArrayList<String> notes = new ArrayList<String>();
     static ArrayList<String> notes2 = new ArrayList<String>();
 
+
     static ArrayAdapter<String> arrayAdapter;
+
+
+
+
 
 
 
@@ -30,6 +35,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ListView listView = findViewById(R.id.listView);
+
+        DatebaseHendler dbHandler = new DatebaseHendler();
+        try {
+            String name=dbHandler.getName(1);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        //int ids = 1;
+
+        ////while(ids <= 10){
+
+        //try {
+
+            //notes.add(dbHandler.getName(ids));
+
+        //} catch (SQLException | ClassNotFoundException e) {
+
+            //throw new RuntimeException(e);
+
+        //}
+
+        //
+
+        //
+        //}
 
 // определяем строковый массив
         final ArrayList<String> list = new ArrayList<>();
@@ -43,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-
                 notes.add("Заголовок");
                 notes2.add("Текст");
                 recreate();
